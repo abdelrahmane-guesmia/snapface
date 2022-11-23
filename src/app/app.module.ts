@@ -4,12 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import * as fr from '@angular/common/locales/fr';
 
 import { AppComponent } from './app.component';
-import { FaceSnapComponent } from './face-snap/face-snap.component';
-import { FaceSnapListComponent } from './face-snap-list/face-snap-list.component';
-import { HeaderComponent } from './header/header.component';
+import { FaceSnapComponent } from './components/face-snap/face-snap.component';
+import { FaceSnapListComponent } from './components/face-snap-list/face-snap-list.component';
+import { HeaderComponent } from './components/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { SingleFaceSnapComponent } from './single-face-snap/single-face-snap.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { SingleFaceSnapComponent } from './components/single-face-snap/single-face-snap.component';
 
 @NgModule({
   declarations: [
