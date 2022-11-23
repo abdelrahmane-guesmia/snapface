@@ -12,10 +12,7 @@ import { SingleFaceSnapComponent } from './components/single-face-snap/single-fa
 
 import { HeaderComponent } from './modules/general/header/header.component';
 import { HomeComponent } from './modules/general/home/home.component';
-import { ContactComponent } from './modules/general/contact/contact.component';
-import { AboutComponent } from './modules/general/about/about.component';
-import { LoginComponent } from './modules/general/login/login.component';
-import { SignupComponent } from './modules/general/signup/signup.component';
+
 import { NotFoundComponent } from './modules/general/not-found/not-found.component';
 import { FooterComponent } from './modules/general/footer/footer.component';
 
@@ -27,10 +24,6 @@ import { FooterComponent } from './modules/general/footer/footer.component';
     HeaderComponent,
     SingleFaceSnapComponent,
     HomeComponent,
-    ContactComponent,
-    AboutComponent,
-    LoginComponent,
-    SignupComponent,
     NotFoundComponent,
     FooterComponent,
   ],
