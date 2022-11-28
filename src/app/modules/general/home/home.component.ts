@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
+  name = 'Snapface';
   constructor(private router: Router) {}
 
   onContinue(): void {

@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { FaceSnapListComponent } from './components/face-snap-list/face-snap-list.component';
-import { SingleFaceSnapComponent } from './components/single-face-snap/single-face-snap.component';
+import { FaceSnapListComponent } from './modules/application/face-snap-list/face-snap-list.component';
+import { SingleFaceSnapComponent } from './modules/application/single-face-snap/single-face-snap.component';
 import { HomeComponent } from './modules/general/home/home.component';
 import { NotFoundComponent } from './modules/general/not-found/not-found.component';
 
@@ -38,6 +38,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/general/signup/signup.module').then(
         (mod) => mod.SignupModule
+      ),
+  },
+  {
+    path: 'facesnap-form',
+    loadChildren: () =>
+      import('./modules/application/face-snap-form/face-snap-form.module').then(
+        (mod) => mod.FaceSnapFormModule
       ),
   },
   { path: 'facesnaps', title: 'facesnap', component: FaceSnapListComponent },
