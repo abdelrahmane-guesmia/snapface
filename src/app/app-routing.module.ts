@@ -42,15 +42,24 @@ const routes: Routes = [
   },
   {
     path: 'facesnap-form',
+    title: 'Form',
     loadChildren: () =>
       import('./modules/application/face-snap-form/face-snap-form.module').then(
         (mod) => mod.FaceSnapFormModule
       ),
   },
-  { path: 'facesnaps', title: 'facesnap', component: FaceSnapListComponent },
+  {
+    path: 'chartjs',
+    title: 'Chart',
+    loadChildren: () =>
+      import('./modules/application/chartjs/chartjs.module').then(
+        (mod) => mod.ChartjsModule
+      ),
+  },
+  { path: 'facesnaps', title: 'Facesnap', component: FaceSnapListComponent },
   {
     path: 'facesnaps/:id',
-    title: 'facesnap',
+    title: 'Facesnap',
     component: SingleFaceSnapComponent,
   },
   { path: '**', component: NotFoundComponent },

@@ -4,9 +4,11 @@ import { CommonModule } from '@angular/common';
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login.component';
 
+import { PrimengModule } from '../../primeng.module';
+
 @NgModule({
   declarations: [LoginComponent],
-  imports: [CommonModule, LoginRoutingModule],
+  imports: [CommonModule, LoginRoutingModule, PrimengModule],
   exports: [LoginComponent],
 })
 export class LoginModule {}

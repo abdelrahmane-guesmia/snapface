@@ -3,9 +3,11 @@
   font-family: Roboto, Helvetica, sans-serif;
 }
 
+html,
 body {
-  padding: auto;
-  margin: auto;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 button {
