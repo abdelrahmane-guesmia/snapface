@@ -2,6 +2,7 @@ import { registerLocaleData } from '@angular/common';
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import * as fr from '@angular/common/locales/fr';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -28,7 +29,7 @@ import { PrimengModule } from './modules/primeng.module';
     NotFoundComponent,
     FooterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, PrimengModule],
+  imports: [BrowserModule, AppRoutingModule, PrimengModule, HttpClientModule],
   providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],
   bootstrap: [AppComponent],
 })

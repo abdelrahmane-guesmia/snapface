@@ -1,44 +1,26 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { FaceSnap } from '../models/face-snap-model';
+import { IFaceSnap } from '../models/interface/face-snap-interface';
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json',
+  }),
+};
+
+const baseUrl = 'https://localhost:8080/api/FaceSnap';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FaceSnapsService {
-  faceSnaps: FaceSnap[] = [
-    {
-      id: 1,
-      title: 'test',
-      description: 'test description',
-      createdDate: new Date(),
-      snaps: 150,
-      imageUrl:
-        'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg',
-      location: 'Nanterre',
-    },
-    {
-      id: 2,
-      title: 'test1',
-      description: 'test description1',
-      createdDate: new Date(),
-      snaps: 0,
-      imageUrl:
-        'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg',
-      location: 'Paris',
-    },
-    {
-      id: 3,
-      title: 'test2',
-      description: 'test description2',
-      createdDate: new Date(),
-      snaps: 0,
-      imageUrl:
-        'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg',
-    },
-  ];
+  constructor(private http: HttpClient) {}
+  faceSnaps: FaceSnap[] = [];
 
-  getAllFaceSnaps(): FaceSnap[] {
-    return this.faceSnaps;
+  getAllFaceSnaps(): Observable<IFaceSnap[]> {
+    return this.http.get<IFaceSnap[]>(baseUrl, httpOptions);
   }
 
   getFaceSnapById(faceSnapId: number): FaceSnap {
