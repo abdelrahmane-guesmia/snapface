@@ -1,6 +1,6 @@
 # Snapface
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.8.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.8. Projet snapface en Angular pour des tests
 
 ## Development server
 
